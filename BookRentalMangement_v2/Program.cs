@@ -11,7 +11,7 @@ namespace BookRentalMangement_v2
         static void Main(string[] args)
         {
 
-            BookRepository repository = new BookRepository();
+            BookManager bookManager = new BookManager();
             while (true)
             {
                 Console.Clear();
@@ -89,4 +89,5 @@ namespace BookRentalMangement_v2
             }
         }
     }
+    
 }

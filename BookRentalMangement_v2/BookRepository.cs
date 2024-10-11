@@ -11,6 +11,8 @@ namespace BookRentalMangement_v2
     {
 
         private List<Book> books = new List<Book>();
+        private int UniId = 1;
+
         private string connectionstring = "server=(localdb)\\MSSQLLocalDb;database=BookRentalManagement; Trusted_Connection=True;TrustServerCertificate=True;";
 
         public void CreateBook(Book book)
@@ -23,6 +25,7 @@ namespace BookRentalMangement_v2
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+      
                     command.Parameters.AddWithValue("@title", title);
                     command.Parameters.AddWithValue("@author", book.Author);
                     command.Parameters.AddWithValue("@rentalPrice", book.RentalPrice);
