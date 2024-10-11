@@ -57,13 +57,12 @@ namespace BookRentalMangement_v2
                         {
                             while (reader.Read())
                             {
-                                var book = new Book(
-                                    reader.GetInt32(0),
-                                    reader.GetString(1),
-                                    reader.GetString(2),
-                                    reader.GetDecimal(4)
-                                );
-                                books.Add(book);
+
+                                reader.GetInt32(0);
+                                reader.GetString(1);
+                                reader.GetString(2);
+                                reader.GetDecimal(4);
+                                
                             }
                         }
                     }
